@@ -1,0 +1,4 @@
+
+<div class="listeFilms">
+    <app-film *ngFor="let f of tabFilms" [unFilm]="f" (demandeSuppression)="supprimerFilm(f)"></app-film>
+</div>

@@ -1,0 +1,20 @@
+
+div {
+    width: 300px;
+    background-color: lightcyan;
+    border-radius: 10px;
+    
+}
+
+h1 {
+    text-align: right;
+    font-size: medium;
+}
+
+.majeur {
+    background-color: lightgreen;
+}
+
+.mineur {
+    background-color: lightcoral;
+}

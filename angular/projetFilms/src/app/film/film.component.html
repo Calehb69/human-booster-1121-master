@@ -1,0 +1,14 @@
+
+<div>
+    <img [src]="unFilm.image"/>
+    <h3>{{ unFilm.nom}}</h3>
+    <p>Sorti en {{unFilm.anneeSortie}}.</p>
+    <p>Genres : </p>
+    <ul>
+        <li *ngFor="let g of unFilm.genres">{{ g }}</li>
+    </ul>
+    <p>Réalisé par {{ unFilm.realisateur }}.</p>
+    <p>Durée : {{ unFilm.duree }} minutes.</p>
+    <button (click)="reagirAuClick()">Supprimer</button>
+    <button (click)="declencherModif()">Modifier</button>
+</div>

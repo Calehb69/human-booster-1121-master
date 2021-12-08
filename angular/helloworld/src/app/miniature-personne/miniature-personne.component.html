@@ -1,0 +1,11 @@
+
+<div>
+    <h1>{{ unePersonne.nomComplet }}</h1>
+    <p>Né le {{ unePersonne.dateNaissance | date:"shortDate"}}</p>
+    
+    <p class="majeur" *ngIf="unePersonne.majeur">{{ unePersonne.prenom }} est majeur(e) </p>
+
+    <p class="mineur" *ngIf="!unePersonne.majeur">{{ unePersonne.prenom }} est mineur(e) </p>
+
+    <button (click)="reagirAuClic()">Supprimer</button>
+</div>

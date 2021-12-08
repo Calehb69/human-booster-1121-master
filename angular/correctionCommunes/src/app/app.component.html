@@ -1,0 +1,13 @@
+
+<form (ngSubmit)="lancerRecherche()">
+  <input type="text" [(ngModel)]="nomCommune" required name="nomCommune" placeholder="Saisir une commune"/>
+  <input type="submit" value="Rechercher"/>
+</form>
+
+<div *ngIf="tabCommunes">
+  <p>Résultat de la recherche : </p>
+  <p>{{ tabCommunes.length }} communes trouvées.</p>
+  <ul>
+    <li *ngFor="let c of tabCommunes">{{ c.nom }}</li>
+  </ul>
+</div>

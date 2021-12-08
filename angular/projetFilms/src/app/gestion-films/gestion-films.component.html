@@ -1,0 +1,20 @@
+
+<form (ngSubmit)="validerForm(formCreationFilm)" #formCreationFilm="ngForm">
+
+    <input required type="text" [(ngModel)]="nom" name="nomFilm" placeholder="Nom"/><br/>
+    <input required min=1900 max=2100 type="number" [(ngModel)]="anneeSortie" name="anneeSortieFilm" placeholder="Année de sortie"/><br/>
+    <input type="text" [(ngModel)]="nouveauGenre" name="genreFilm" placeholder="Genre"/><br/>
+    <input type="button" value="Ajouter genre" (click)="ajouterGenre()"/>
+    <p>Genres déjà ajoutés :</p>
+    <ul>
+        <li *ngFor="let g of listeGenres">{{ g }}</li>
+    </ul>
+    <input type="button" (click)="flushGenres()" value="Réinitialiser la liste"/>
+    <br/>
+    <input required type="text" [(ngModel)]="realisateur" name="realisateurFilm" placeholder="Realisateur"/><br/>
+    <input required min=5 type="number" [(ngModel)]="duree" name="dureeFilm" placeholder="Durée"/><br/>
+    <input required type="url" [(ngModel)]="image" name="imageFilm" placeholder="Image"/><br/>
+
+    <input type="submit" [disabled]="!formCreationFilm.valid" [value]="modeEdition ? 'Modifier':'Créer'"/>
+
+</form>

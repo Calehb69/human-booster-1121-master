@@ -1,0 +1,17 @@
+<nav>
+  <ul>
+    <li><a routerLink="/page1" routerLinkActive="active">Page 1</a></li>
+    <li><a routerLink="/page2" routerLinkActive="active">Page 2</a></li>
+  </ul>
+</nav>
+
+<!-- <div class="listePersonnes">
+  <app-miniature-personne 
+    *ngFor="let p of tabPersonnes"
+    class="personne"
+    [unePersonne]="p"
+    (demandeSuppression)="supprimerPersonne(p)">
+  </app-miniature-personne>
+</div> -->
+
+<router-outlet></router-outlet>
